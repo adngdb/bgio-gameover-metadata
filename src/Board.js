@@ -2,11 +2,10 @@ import React from 'react';
 
 
 export default function Board(props) {
-    const { G, ctx, moves } = props;
+    const { ctx, moves } = props;
 
     return <main>
-        <p>Count: { G.count }</p>
         <p>Gameover: { ctx.gameover }</p>
-        <button onClick={ () => moves.pass() }>Pass</button>
+        <button onClick={ () => moves.finish() }>Finish</button>
     </main>;
 }

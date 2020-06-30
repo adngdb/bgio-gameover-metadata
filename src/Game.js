@@ -1,18 +1,8 @@
 export default {
     name: 'GameOverTestGame',
-    setup: () => {
-        return {
-            count: 1,
-        };
-    },
     moves: {
-        pass: (G, ctx) => {
-            G.count--;
+        finish: (G, ctx) => {
+            ctx.events.endGame('finished');
         },
-    },
-    endIf: (G, ctx) => {
-        if (G.count <= 0) {
-            return 'finished';
-        }
     },
 };
